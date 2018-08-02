@@ -34,7 +34,21 @@ namespace Ch6_P2_Employees
 
             #endregion
 
+            #region Has-a model ( containment or delegation model )
 
+
+            //Manager chucky = new Manager("Chucky", 50, 92, 100000, "333-23-2322", 9000);
+            //double cost = chucky.GetBenefitCost();
+
+            //Console.WriteLine(" here is the benefits of emp =  " + cost);
+
+            #endregion
+
+            #region Understanding Nested Type Definitions
+
+
+
+            #endregion
 
             Console.ReadLine();
         }
