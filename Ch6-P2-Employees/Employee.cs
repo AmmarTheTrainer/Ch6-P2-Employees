@@ -8,6 +8,9 @@ namespace Ch6_P2_Employees
 {
     partial class Employee
     {
+
+
+
         //// Field data.
         //private string empName;
         //private int empID;
@@ -22,8 +25,9 @@ namespace Ch6_P2_Employees
         protected int empAge;
         protected string empSSN; // read only
 
-        // Contain a BenefitPackage object.
-        protected BenefitPackage empBenefits = new BenefitPackage();
+        //// Contain a BenefitPackage object.
+        //protected BenefitPackage empBenefits = new BenefitPackage();
+        public BenefitPackage empBenefits = new BenefitPackage();
 
         // Expose certain benefit behaviors of object.
         public double GetBenefitCost()

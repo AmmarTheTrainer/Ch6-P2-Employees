@@ -46,6 +46,18 @@ namespace Ch6_P2_Employees
 
             #region Understanding Nested Type Definitions
 
+            //Employee emp = new Employee();
+
+            //emp.empBenefits = new BenefitPackage();
+
+
+            Employee.BenefitPackage bnftp = new Employee.BenefitPackage();
+
+            Employee.BenefitPackage.BenefitPackageLevel pl = new Employee.BenefitPackage.BenefitPackageLevel();
+
+            pl = Employee.BenefitPackage.BenefitPackageLevel.Platinum;
+
+
 
 
             #endregion
