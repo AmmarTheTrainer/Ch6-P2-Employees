@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ch5_P4_EmployeeApp
+namespace Ch6_P2_Employees
 {
     partial class Employee
     {

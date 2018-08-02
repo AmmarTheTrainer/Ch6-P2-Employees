@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ch5_P4_EmployeeApp
+namespace Ch6_P2_Employees
 {
     partial class Employee
     {
@@ -19,7 +19,10 @@ namespace Ch5_P4_EmployeeApp
 
 
         // Constructors.
-        public Employee() { }
+        public Employee()
+        {
+            Console.WriteLine(" Default ctor Employee ( parent class )  ");
+        }
         public Employee(string name, int id, float pay) : this(name, 0, id, pay){}
         public Employee(string name, int age, int id, float pay)
         {
@@ -29,14 +32,20 @@ namespace Ch5_P4_EmployeeApp
             currPay = pay;
         }
 
-        public Employee(string name, int age, int id, float pay, string ssn)
+        //public Employee(string name, int age, int id, float pay, string ssn)
+        //{
+        //    Name = name;
+        //    Age = age;
+        //    ID = id;
+        //    Pay = pay;
+        //    // OOPS! This is no longer possible if the property is read only.
+        //    //SocialSecurityNumber = ssn;
+        //}
+
+        // Add to the Employee base class.
+        public Employee(string name, int age, int id, float pay, string ssn) : this(name, age, id, pay)
         {
-            Name = name;
-            Age = age;
-            ID = id;
-            Pay = pay;
-            // OOPS! This is no longer possible if the property is read only.
-            //SocialSecurityNumber = ssn;
+            empSSN = ssn;
         }
 
         #endregion
