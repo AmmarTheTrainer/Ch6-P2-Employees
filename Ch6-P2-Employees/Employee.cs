@@ -8,12 +8,19 @@ namespace Ch6_P2_Employees
 {
     partial class Employee
     {
-        // Field data.
-        private string empName;
-        private int empID;
-        private float currPay;
-        private int empAge;
-        private string empSSN; // Read Only
+        //// Field data.
+        //private string empName;
+        //private int empID;
+        //private float currPay;
+        //private int empAge;
+        //private string empSSN; // Read Only
+
+        // Derived classes can now directly access this information.
+        protected string empName;
+        protected int empID;
+        protected float currPay;
+        protected int empAge;
+        protected string empSSN; // read only
 
         #region Constructors
 
@@ -26,6 +33,7 @@ namespace Ch6_P2_Employees
         public Employee(string name, int id, float pay) : this(name, 0, id, pay){}
         public Employee(string name, int age, int id, float pay)
         {
+            Console.WriteLine(" 4 arguement constructor base class ");
             empName = name;
             empID = id;
             empAge = age;
@@ -45,6 +53,7 @@ namespace Ch6_P2_Employees
         // Add to the Employee base class.
         public Employee(string name, int age, int id, float pay, string ssn) : this(name, age, id, pay)
         {
+            Console.WriteLine(" 5 argument constructor base class ");
             empSSN = ssn;
         }
 
