@@ -11,6 +11,10 @@ namespace Ch6_P2_Employees
 
         public int SalesNumber { get; set; }
 
+        #region Constructors
+
+
+
 
         public SalesPerson()
         {
@@ -24,23 +28,35 @@ namespace Ch6_P2_Employees
             // This belongs with us!
             SalesNumber = numbOfSales;
         }
+        #endregion
 
         public void method()
         {
           //  base.SocialSecurityNumber = 22;
         }
 
-    }
 
-    sealed class PTSalesPerson : SalesPerson
-    {
-        public PTSalesPerson(string fullName, int age, int empID, float currPay, string ssn, int numbOfSales) : base(fullName, age, empID, currPay, ssn, numbOfSales)
+        // A salesperson's bonus is influenced by the number of sales.
+        public sealed override void GiveBonus(float amount)
         {
-            Console.WriteLine(" 6 agrs ctor Part Time sales person ");
+            int salesBonus = 0;
+            if (SalesNumber >= 0 && SalesNumber <= 100)
+                salesBonus = 10;
+            else
+            {
+                if (SalesNumber >= 101 && SalesNumber <= 200)
+                    salesBonus = 15;
+                else
+                    salesBonus = 20;
+            }
+            base.GiveBonus(amount * salesBonus); // call to base class function with same name
         }
-        // Assume other members here...
-    }
 
+        public override void DisplayStats()
+        {
+            base.DisplayStats();
+        }
+    }
     //public class PTPTSalesPerson : PTSalesPerson
     //{
 

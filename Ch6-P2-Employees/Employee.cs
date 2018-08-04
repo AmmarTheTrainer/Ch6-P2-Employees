@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ch6_P2_Employees
 {
-    partial class Employee
+    abstract partial class Employee
     {
         //// Field data.
         //private string empName;
@@ -17,27 +17,15 @@ namespace Ch6_P2_Employees
 
 
         // Derived classes can now directly access this information.
+
         protected string empName;
         protected int empID;
         protected float currPay;
         protected int empAge;
         protected string empSSN; // read only
 
-        //// Contain a BenefitPackage object.
-        //protected BenefitPackage empBenefits = new BenefitPackage();
-        public BenefitPackage empBenefits = new BenefitPackage();
-
-        // Expose certain benefit behaviors of object.
-        public double GetBenefitCost()
-        {
-            return empBenefits.ComputePayDeduction();
-        }
-        // Expose object through a custom property.
-        public BenefitPackage Benefits
-        {
-            get { return empBenefits; }
-            set { empBenefits = value; }
-        }
+        
+        
 
         #region Constructors
 
@@ -47,7 +35,10 @@ namespace Ch6_P2_Employees
         {
             Console.WriteLine(" Default ctor Employee ( parent class )  ");
         }
-        public Employee(string name, int id, float pay) : this(name, 0, id, pay){}
+        public Employee(string name, int id, float pay) : this(name, 0, id, pay)
+        {
+
+        }
         public Employee(string name, int age, int id, float pay)
         {
             Console.WriteLine(" 4 arguement constructor base class ");
@@ -114,6 +105,9 @@ namespace Ch6_P2_Employees
 
         #endregion
 
+        #region Getter and Setters
+
+
         // Accessor (get method).
         public string GetName()
         {
@@ -130,19 +124,32 @@ namespace Ch6_P2_Employees
                 empName = name;
         }
 
+        #endregion
 
-        // Methods.
-        public void GiveBonus(float amount)
+        #region Methods
+
+        public double ComputePayDeduction()
         {
+            return 125.0;
+        }
+
+        public virtual void GiveBonus(float amount)
+        {
+            Console.WriteLine(" Give Bonus < base class - employee > method ");
             Pay += amount;
             //currPay += amount; // Not recommended
         }
-        public void DisplayStats()
+        public virtual void DisplayStats()
         {
-            Console.WriteLine("Name: {0}", empName);
-            Console.WriteLine("ID: {0}", empID);
-            Console.WriteLine("Age: {0}", empAge);
-            Console.WriteLine("Pay: {0}", currPay);
+            Console.WriteLine("\n ======== ( Display Employee , Base Class ) ======= ");
+            Console.WriteLine("\tName: {0}", empName);
+            Console.WriteLine("\tID: {0}", empID);
+            Console.WriteLine("\tAge: {0}", empAge);
+            Console.WriteLine("\tPay: {0}", currPay);
+            Console.WriteLine("\tSSN: {0}", SocialSecurityNumber);
         }
+
+        #endregion
+
     }
 }

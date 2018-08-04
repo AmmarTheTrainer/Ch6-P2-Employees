@@ -21,5 +21,22 @@ namespace Ch6_P2_Employees
                 return 125.0;
             }
         }
+
+        //// Contain a BenefitPackage object.
+        //protected BenefitPackage empBenefits = new BenefitPackage();
+        //public BenefitPackage empBenefits = new BenefitPackage();
+
+
+        //// Expose certain benefit behaviors of object.
+        //public double GetBenefitCost()
+        //{
+        //    return empBenefits.ComputePayDeduction();
+        //}
+        //// Expose object through a custom property.
+        //public BenefitPackage Benefits
+        //{
+        //    get { return empBenefits; }
+        //    set { empBenefits = value; }
+        //}
     }
 }

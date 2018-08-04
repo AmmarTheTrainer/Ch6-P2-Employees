@@ -62,6 +62,42 @@ namespace Ch6_P2_Employees
 
             #endregion
 
+            #region The Third Pillar of OOP: C# Ploymporhic Support
+
+            //// Give each employee a bonus?
+            //Manager chucky = new Manager("Chucky", 50, 92, 100000, "333-23-2322", 9000);
+            //chucky.GiveBonus(300);
+            //chucky.DisplayStats();
+            //Console.WriteLine();
+
+
+
+
+            #endregion
+
+            #region The virtual and override keywords
+
+            //// A better bonus system!
+            //Manager chucky = new Manager("Chucky", 50, 92, 100000, "333-23-2322", 9000);
+            //chucky.GiveBonus(300);
+            //chucky.DisplayStats();
+
+            //Console.WriteLine();
+
+            //SalesPerson fran = new SalesPerson("Fran", 43, 93, 3000, "932-32-3232", 31);
+            //fran.GiveBonus(200);
+            //fran.DisplayStats();
+
+            #endregion
+
+            #region Understanding Abstract Classes
+
+            //// What exactly does this mean?
+            
+            //Employee X = new Employee();
+
+            #endregion
+
             Console.ReadLine();
         }
     }
