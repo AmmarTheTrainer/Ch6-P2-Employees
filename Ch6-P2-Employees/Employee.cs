@@ -8,15 +8,13 @@ namespace Ch6_P2_Employees
 {
     partial class Employee
     {
-
-
-
         //// Field data.
         //private string empName;
         //private int empID;
         //private float currPay;
         //private int empAge;
         //private string empSSN; // Read Only
+
 
         // Derived classes can now directly access this information.
         protected string empName;
