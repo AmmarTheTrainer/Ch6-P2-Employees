@@ -33,7 +33,7 @@ namespace Ch6_P2_Employees
         // Constructors.
         public Employee()
         {
-            Console.WriteLine(" Default ctor Employee ( parent class )  ");
+            //Console.WriteLine(" Default ctor Employee ( parent class )  ");
         }
         public Employee(string name, int id, float pay) : this(name, 0, id, pay)
         {
@@ -41,7 +41,7 @@ namespace Ch6_P2_Employees
         }
         public Employee(string name, int age, int id, float pay)
         {
-            Console.WriteLine(" 4 arguement constructor base class ");
+            //Console.WriteLine(" 4 arguement constructor base class ");
             empName = name;
             empID = id;
             empAge = age;
@@ -61,7 +61,7 @@ namespace Ch6_P2_Employees
         // Add to the Employee base class.
         public Employee(string name, int age, int id, float pay, string ssn) : this(name, age, id, pay)
         {
-            Console.WriteLine(" 5 argument constructor base class ");
+            //Console.WriteLine(" 5 argument constructor base class ");
             empSSN = ssn;
         }
 

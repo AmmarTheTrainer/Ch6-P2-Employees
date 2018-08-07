@@ -37,6 +37,8 @@ namespace Ch6_P2_Employees
             #region Has-a model ( containment or delegation model )
 
 
+            //Console.WriteLine("  hello ");
+
             //Manager chucky = new Manager("Chucky", 50, 92, 100000, "333-23-2322", 9000);
             //double cost = chucky.GetBenefitCost();
 
@@ -51,11 +53,11 @@ namespace Ch6_P2_Employees
             //emp.empBenefits = new BenefitPackage();
 
 
-            Employee.BenefitPackage bnftp = new Employee.BenefitPackage();
+            //Employee.BenefitPackage bnftp = new Employee.BenefitPackage();
 
-            Employee.BenefitPackage.BenefitPackageLevel pl = new Employee.BenefitPackage.BenefitPackageLevel();
+            //Employee.BenefitPackage.BenefitPackageLevel pl = new Employee.BenefitPackage.BenefitPackageLevel();
 
-            pl = Employee.BenefitPackage.BenefitPackageLevel.Platinum;
+            //pl = Employee.BenefitPackage.BenefitPackageLevel.Platinum;
 
 
 
@@ -69,7 +71,6 @@ namespace Ch6_P2_Employees
             //chucky.GiveBonus(300);
             //chucky.DisplayStats();
             //Console.WriteLine();
-
 
 
 
@@ -93,12 +94,44 @@ namespace Ch6_P2_Employees
             #region Understanding Abstract Classes
 
             //// What exactly does this mean?
-            
+
             //Employee X = new Employee();
 
             #endregion
 
+
+            #region Base Class/Derived Class Casting Rules
+
+            CastingExamples();
+
+            #endregion
+
             Console.ReadLine();
+        }
+
+        private static void GivePromotion(Employee emp)
+        {
+            // Increase pay...
+            // Give new parking space in company garage...
+            Console.WriteLine("{0} was promoted!   > Type = {1}", emp.Name , emp.GetType().Name);
+        }
+
+        private static void CastingExamples()
+        {
+            // A Manager "is-a" System.Object, so we can
+            // store a Manager reference in an object variable just fine.
+
+            object frank = new Manager("Frank Zappa", 9, 3000, 40000, "111-11-1111", 5);
+
+
+
+            // A Manager "is-an" Employee too.
+            Employee moonUnit = new Manager("MoonUnit Zappa", 2, 3001, 20000, "101-11-1321", 1);
+            GivePromotion(moonUnit);
+
+            // A PTSalesPerson "is-a" SalesPerson.
+            SalesPerson jill = new PTSalesPerson("Jill", 834, 3002, 100000, "111-12-1119", 90);
+            GivePromotion(jill);
         }
     }
 }
