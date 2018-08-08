@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ch6_P2_Employees
 {
-    abstract partial class Employee
+    public abstract partial class Employee
     {
         //// Field data.
         //private string empName;
