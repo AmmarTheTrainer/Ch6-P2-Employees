@@ -15,12 +15,12 @@ namespace Ch6_P2_Employees
 
         public Manager()
         {
-            Console.WriteLine(" Default Constructor Manager ( child class )  ");
+            //Console.WriteLine(" Default Constructor Manager ( child class )  ");
         }
 
         public Manager(string fullName, int age, int empID,float currPay, string ssn, int numbOfOpts) : base(fullName, age, empID, currPay, ssn)
         {
-            Console.WriteLine(" 6 arguement Constructor Manager ( child class )  ");
+            //Console.WriteLine(" 6 arguement Constructor Manager ( child class )  ");
             // This property is defined by the Manager class.
             StockOptions = numbOfOpts;
         }
